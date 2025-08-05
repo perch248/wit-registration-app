@@ -1,7 +1,7 @@
 
 <?php
 $server = "tcp:wit-sqlsrv.database.windows.net,1433";
-$database = "WITStudentDB";
+$database = "WIT-StudentDB";
 $username = "dbadmin";
 $password = "P@ssword123";
 
