@@ -1,17 +1,52 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>WIT Student Registration</h2>
-    <form action="register.php" method="post">
-        First Name: <input type="text" name="first_name" required><br><br>
-        Last Name: <input type="text" name="last_name" required><br><br>
-        Email: <input type="email" name="email" required><br><br>
-        Program: <input type="text" name="program"><br><br>
-        <input type="submit" value="Register">
-    </form>
+  <main class="container">
+    <section class="card">
+      <header class="card__header">
+        <h1 class="title">WIT Student Registration</h1>
+        <p class="subtitle">Please fill in your details below.</p>
+      </header>
+
+      <form class="form" action="register.php" method="post" novalidate>
+        <div class="form__row">
+          <label for="first_name">First Name</label>
+          <input id="first_name" name="first_name" type="text" required placeholder="e.g., Alex">
+          <span class="hint">Required</span>
+        </div>
+
+        <div class="form__row">
+          <label for="last_name">Last Name</label>
+          <input id="last_name" name="last_name" type="text" required placeholder="e.g., Rivera">
+          <span class="hint">Required</span>
+        </div>
+
+        <div class="form__row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="name@example.edu">
+          <span class="hint">Use your school email</span>
+        </div>
+
+        <div class="form__row">
+          <label for="program">Program</label>
+          <input id="program" name="program" type="text" placeholder="e.g., Computer Systems">
+        </div>
+
+        <div class="form__actions">
+          <button class="btn" type="submit">Register</button>
+        </div>
+      </form>
+
+      <footer class="card__footer">
+        <small>By registering, you agree to our <a href="#" aria-label="Read terms and conditions">terms</a>.</small>
+      </footer>
+    </section>
+  </main>
 </body>
 </html>
